@@ -1,25 +1,32 @@
 using System;
-using System.Linq;
-using System.Collections.Generic;
-using static System.Console;
-using static System.Convert;
-
-namespace LW6
+ 
+class Program
 {
-    class Program
+    static void Main()
     {
-        public static void Main(string[] args)
+        Console.Write("Введите размер массива: ");
+        int size = int.Parse(Console.ReadLine());
+        int[] arr = new int[size];
+ 
+        // Заполнение массива
+        for (int i = 0; i < arr.Length; i++)
         {
-            var lists = new List<string> { "4", "34", "765", "325", "234", "8796546", "20", "18", "19"};
-            var counter = 0;
- 
-            for(int i = 0; i < lists.Count; i++)
-            {
-                if (lists.Where(s => s.Length == lists[i].Length).Count() > 1)
-                    counter++;
-            }
- 
-            Console.WriteLine("Result: " + counter);
+            Console.Write(i + " - введите значение: ");
+            arr[i] = int.Parse(Console.ReadLine());
         }
+ 
+        /// Замена в массиве
+for (int i = 0; i < arr.Length / 2; i++)
+{
+    int temp = arr[i];
+    arr[i] = arr[arr.Length - i - 1];
+    arr[arr.Length - i - 1] = temp;
+}
+ 
+        // Вывод массива на экран
+        for (int i = 0;i < arr.Length; i++)
+            Console.Write(arr[i] + " ");
+    
+        Console.ReadKey();
     }
 }
