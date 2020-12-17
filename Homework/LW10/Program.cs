@@ -1,32 +1,35 @@
 using System;
- 
+
 class Program
 {
     static void Main()
     {
-        Console.Write("Введите размер массива: ");
-        int size = int.Parse(Console.ReadLine());
-        int[] arr = new int[size];
- 
-        // Заполнение массива
-        for (int i = 0; i < arr.Length; i++)
+        Random r = new Random();
+        int max = Int32.MinValue, min = Int32.MaxValue;
+        int imax = 0, imin = 0;
+        int[] a = new int[5];
+
+        for (int i = 0; i < a.Length; i++)
         {
-            Console.Write(i + " - введите значение: ");
-            arr[i] = int.Parse(Console.ReadLine());
+            Console.Write((a[i] = r.Next(0, 50)) + " ");
+            if (min > a[i])
+            {
+                min = a[i];
+                imin = i;
+            }
+            if (max < a[i])
+            {
+                max = a[i];
+                imax = i;
+            }
         }
- 
-        /// Замена в массиве
-for (int i = 0; i < arr.Length / 2; i++)
-{
-    int temp = arr[i];
-    arr[i] = arr[arr.Length - i - 1];
-    arr[arr.Length - i - 1] = temp;
-}
- 
-        // Вывод массива на экран
-        for (int i = 0;i < arr.Length; i++)
-            Console.Write(arr[i] + " ");
-    
+
+        a[imin] = max;
+        a[imax] = min;
+
+        Console.WriteLine();
+        for (int i = 0; i < a.Length; i++)
+            Console.Write(a[i] + " ");
         Console.ReadKey();
     }
 }
