@@ -1,11 +1,11 @@
 using System;
 namespace LW2
 {
-    class Program
+    class LW2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(NumericSeries.GetSum(4, 4));
+            Console.WriteLine(class1.GetSum(4, 4));
         }
     }
 }
