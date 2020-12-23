@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+namespace Task_1
+{
+
+    class Headphones
+    {
+        public string Name { get; set; }
+        public string Color { get; set; }
+        public string Year { get; set; }
+        public string Price { get; set; }
+        public override string ToString()
+
+        {
+            return $"Name:{Name}\t Color: {Color}\t Year: {Year}\t Price: {Price}";
+        }
+        static void Main(string[] args)
+        {
+            var g = new Shop();
+            var flag = true;
+            while (flag)
+            {
+                Console.WriteLine("1 - найти наушники в магазине по параметрам");
+                Console.WriteLine("2 - выход");
+                Console.Write("Опция > ");
+                var option = int.Parse(Console.ReadLine());
+                switch (option)
+                {
+                    case 1: g.SearchHeadphoneName(); g.SearchHeadphonePrice(); g.SearchHeadphonePriceYear(); g.SearchHeadphoneColor(); break;
+                    case 2: flag = false; break;
+                    default: Console.WriteLine("Упс"); break;
+                }
+            }
+        }
+
+    }
+}
