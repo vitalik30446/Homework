@@ -34,7 +34,7 @@ namespace Task_1
             var car = cars.FirstOrDefault(d => d.Name == name);
             if (car == null) Console.WriteLine("Данной машини нет в вашем гараже.Попробуйте найти по скорости");
             else
-                Console.WriteLine($"Name:{car.Name}\t Color: {car.Color}\t Max_Speed: { car.Max_Speed}\t Type: { car.Type}");
+                Console.WriteLine($"Name:{car.Name}\t Color: {car.Color}\t Max_Speed: { car.Max_Speed}\t Year: {car.Year}\t Type: { car.Type}");
         }
         public void ChoiceCarMax_Speed()
         {
@@ -43,7 +43,7 @@ namespace Task_1
             var car = cars.FirstOrDefault(d => d.Max_Speed == Convert.ToInt32(max_speed));
             if (car == null) Console.WriteLine("Данной машини нет в вашем гараже.Попробуйте найти по типу");
             else
-                Console.WriteLine($"Name:{ car.Name}\t Color: { car.Color}\t Max_Speed: { car.Max_Speed}\t Type: { car.Type}");
+                Console.WriteLine($"Name:{car.Name}\t Color: {car.Color}\t Max_Speed: { car.Max_Speed}\t Year: {car.Year}\t Type: { car.Type}");
         }
         public void ChoiceCarToType()
         {
@@ -56,7 +56,7 @@ namespace Task_1
                 return;
             }
             else
-                Console.WriteLine($"Name:{ car.Name}\t Color: { car.Color}\t Max_Speed: { car.Max_Speed}\t Type: { car.Type}");
+                Console.WriteLine($"Name:{car.Name}\t Color: {car.Color}\t Max_Speed: { car.Max_Speed}\t Year: {car.Year}\t Type: { car.Type}");
         }
         public void ChoiceCarToYear()
         {
@@ -69,7 +69,7 @@ namespace Task_1
                 return;
             }
             else
-                Console.WriteLine($"Name:{car.Name}\tColor: { car.Color}\tMax_Speed: { car.Max_Speed}\t Type: { car.Type}");
+                Console.WriteLine($"Name:{car.Name}\t Color: {car.Color}\t Max_Speed: { car.Max_Speed}\t Year: {car.Year}\t Type: { car.Type}");
         }
         public void ChoiceCarToColor()
         {
@@ -82,7 +82,7 @@ namespace Task_1
                 return;
             }
             else
-                Console.WriteLine($"Name:{car.Name}\tColor: { car.Color}\tMax_Speed: { car.Max_Speed}\t Type: { car.Type}");
+                Console.WriteLine($"Name:{car.Name}\t Color: {car.Color}\t Max_Speed: { car.Max_Speed}\t Year: {car.Year}\t Type: { car.Type}");
         }
     }
 }
